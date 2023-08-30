@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{ asset('css/microsoft-2.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    @vite('resources/css/app.css')
 </head>
 
 <body>
@@ -229,6 +230,7 @@
     </nav>
 
     <header>
+        <div class="text-[75px] md:bg-[blue] border-mainred border-[10px] hover:bg-[green]">123</div>
         <div>
             <div id="swiper-1" class="swiper mySwiper">
                 <div class="swiper-wrapper">
