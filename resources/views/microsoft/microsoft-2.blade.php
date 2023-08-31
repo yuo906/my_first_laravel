@@ -228,7 +228,6 @@
             </a>
         </ul>
     </nav>
-
     <header>
         <div class="text-[75px] md:bg-[blue] border-mainred border-[10px] hover:bg-[green]">123</div>
         <div>
@@ -301,38 +300,16 @@
         </section>
 
         <section class="four-card container-normal">
-            <div class="one-card">
-                <a href="">
-                    <img src="{{ asset('img/Xbox-380x213.webp') }}" alt="">
-                    <div class="title">Xbox Series X</div>
-                    <div class="content">有史以來最快、最強大的Xbox</div>
-                    <p>選購Xbox Series X</p>
-                </a>
-            </div>
-            <div class="one-card">
-                <a href="">
-                    <img src="{{ asset('img/Bing.webp') }}" alt="">
-                    <div class="title">隆重推出新版 Bing</div>
-                    <div class="content">問真正的問題。聊天和創作。從您的AI網路副駕駛獲得更好的答案。</div>
-                    <p>了解新版 Bing</p>
-                </a>
-            </div>
-            <div class="one-card">
-                <a href="">
-                    <img src="{{ asset('img/gldn-XGP-Game-Pass-Ultimate.avif') }}" alt="">
-                    <div class="title">Xbox Game Pass Ultimate</div>
-                    <div class="content"> Xbox Live Gold 以及數百款高品質主機遊戲和電腦遊戲。 與好友同樂，並探索下一個最愛遊戲。 </div>
-                    <p>立即加入</p>
-                </a>
-            </div>
-            <div class="one-card">
-                <a href="">
-                    <img src="{{ asset('img/gldn-CP-Windows11-GlobalLaunch.jfif') }}" alt="">
-                    <div class="title">專為今天和明天的生活而設計</div>
-                    <div class="content"> 新一代遊戲、 您的目標、 親朋好友。 Windows 11 是為了讓您更貼近所喜愛的一切。 </div>
-                    <p>查看您的電腦是否準備就緒</p>
-                </a>
-            </div>
+            @foreach ($news as $item)
+                <div class="one-card">
+                    <a href="">
+                        <img src="{{ $item -> img_path }}" alt="">
+                        <div class="title">{{ $item -> title }}</div>
+                        <div class="content">{{ $item -> content }}</div>
+                        <p>選購Xbox Series X</p>
+                    </a>
+                </div>
+            @endforeach
         </section>
 
         <section class="microsoft-edge container-normal">
